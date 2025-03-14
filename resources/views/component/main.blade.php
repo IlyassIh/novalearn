@@ -158,7 +158,7 @@
         <!-- Copyright -->
     </footer>
     <div class="text-center p-1" style="background-color: rgb(255, 255, 255);">
-        © 2025- Groupe NovaLearn | Conception réalisation par Ilyass Ihassane - Mohamed ElBoussoughti
+        © 2026- Groupe NovaLearn | Conception réalisation par Ilyass Ihassane - Mohamed ElBoussoughti
         
     </div>
     <!-- Footer -->
