@@ -1,0 +1,52 @@
+
+:root {
+    --primary-color: #212b5a;
+    --second-color: #dda537;
+}
+
+.element {
+    height: 20vh;
+}
+.element p {
+    color: var(--second-color);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.element h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.signup h3{
+    font-weight: 600;
+}
+.signup p {
+    color: #7a7a7a;
+    font-size: 14px;
+}
+
+.signup select {
+    color: #7a7a7a;
+    font-weight: 500;
+}
+.send {
+    background-color: var(--second-color);
+    columns: var(--primary-color);
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.send:hover {
+    color: white;
+}
+
+.deja {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
