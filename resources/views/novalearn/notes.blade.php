@@ -18,8 +18,13 @@
                 <select name="" id="">
                     <option value=""></option>
                     <option value="">S1</option>
+<<<<<<< HEAD
                     <option value="">S2</option>
                     <option value="">S3s</option>
+=======
+                    <option value="">S2s</option>
+                    <option value="">S3</option>
+>>>>>>> c64ebbd699b8bdc6c515a39472414bf46f5cf725
                     <option value="">S4</option>
                 </select>
             </div>
