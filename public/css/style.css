@@ -331,17 +331,3 @@ main {
 .box-card .box-header h4 {
     color: #13375c;
 }
-.combine {
-    display: flex;
-    gap: 20px;
-    
-}
-.box-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.box-info .info-etude{
-    display: flex;
-}

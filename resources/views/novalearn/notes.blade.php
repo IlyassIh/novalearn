@@ -9,28 +9,7 @@
         </div>
         <div class="box-body">
             <div class="box-info">
-                <div class="combine">
-                    <div class="info-etude">
-                        <h4>Etaablissemet : </h4>
-                        <span>NovaLearn</span>
-                    </div>
-    
-                    <div class="info-etude">
-                        <h4>Etaablissemet : </h4>
-                        <span>NovaLearn</span>
-                    </div>
-                </div>
-                <div class="combine">
-                    <div class="info-etude">
-                        <h4>Etaablissemet : </h4>
-                        <span>NovaLearn</span>
-                    </div>
-    
-                    <div class="info-etude">
-                        <h4>Etaablissemet : </h4>
-                        <span>NovaLearn</span>
-                    </div>
-                </div>
+                
 
                 
             </div>
