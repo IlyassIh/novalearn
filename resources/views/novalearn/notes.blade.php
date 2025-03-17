@@ -19,7 +19,7 @@
                     <option value=""></option>
                     <option value="">S1</option>
                     <option value="">S2</option>
-                    <option value="">S3</option>
+                    <option value="">S3s</option>
                     <option value="">S4</option>
                 </select>
             </div>
