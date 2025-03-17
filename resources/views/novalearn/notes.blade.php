@@ -5,7 +5,7 @@
 @section('main-content')
     <div class="box-card">
         <div class="box-header">
-            <h4>Suivi des notess</h4>
+            <h4>Suivi des notesss</h4>
         </div>
         <div class="box-body">
             <div class="box-info">
