@@ -17,7 +17,7 @@
                 <label for="">semestres</label>
                 <select name="" id="">
                     <option value=""></option>
-                    <option value="">Ss</option>
+                    <option value="">S1</option>
                     <option value="">S2</option>
                     <option value="">S3</option>
                     <option value="">S4</option>
