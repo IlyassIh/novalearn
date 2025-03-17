@@ -14,7 +14,7 @@
                 
             </div>
             <div class="box-inputs">
-                <label for="">semaistre</label>
+                <label for="">semestre</label>
                 <select name="" id="">
                     <option value=""></option>
                     <option value="">S1</option>

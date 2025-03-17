@@ -2,6 +2,9 @@
 .espace {
     margin-right: 0 !important;
 }
+.active {
+    color: var(--second-color) !important;
+}
 * {
     margin: 0;
     padding: 0;
@@ -32,9 +35,11 @@ body {
     width: 100%;
 }
 
+
 nav ul li a {
     font-size: 14px !important;
     font-weight: 700 !important;
+    color: var(--primary-color) !important;
 }
 
 nav ul li a:hover {
