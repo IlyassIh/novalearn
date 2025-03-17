@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class Note extends Controller
 {
     function index() {
-        return view('component.notes');
+        return view('novalearn.notes');
     }
 }
