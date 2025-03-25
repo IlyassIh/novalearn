@@ -47,7 +47,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link ">About
+                        <a href="#about" class="nav-link ">À propos
                         </a>
                     </li>
                 </ul>
