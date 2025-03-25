@@ -1,18 +1,18 @@
 @extends('component.main')  
 @section('content')
-<section class="hero-section">
+<section class="hero-section" id="ecole">
     <div class="container center-c">
         <h1>Inscriptions Ouvertes</h1>
         <p class="lead text-warning">Année 2024/2025</p>
         <div class="d-flex justify-content-center gap-3 mt-4">
             <button class="btn btn-light v-btn">Technicien / Technicien Spécialisé</button>
-            <button class="btn btn-light v-btn">Licence / Mastère</button>
+            <button class="btn btn-light v-btn" >Licence / Mastère</button>
         </div>
     </div>
 </section>
 
-<section class="formation container py-5 text-center">
-    <h2 class="section-title">Vous cherchez une formation diplômante de qualité ?</h2>
+<section class="formation container py-5 text-center" id="formation">
+    <h2 class="section-title mt-4">Vous cherchez une formation diplômante de qualité ?</h2>
     <p class="section-subtitle">Vous êtes au bon endroit !</p>
 
     <div class="row mt-4">
@@ -63,7 +63,7 @@
     </div>
 </section>
 
-<div class="contact">
+<div class="contact" id="condidate">
     <div class="container">
         <h2>Je candidate</h2>
         <p class="v-p">
@@ -103,7 +103,7 @@
 </div>
 
 <!-- Statistics Section -->
-<div class="stats-section">
+<div class="stats-section" id="about">
     <div class="container">
         <div class="row">
             <div class="col-md-3">

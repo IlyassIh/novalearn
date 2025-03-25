@@ -33,21 +33,21 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">L’ÉCOLE
+                        <a class="nav-link active" aria-current="page" href="#ecole">L’ÉCOLE
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Formations
+                        <a class="nav-link" href="#formation">Formations
                         </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Espaces
+                        <a href="#condidate" class="nav-link">Condidate
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Contact
+                        <a href="#about" class="nav-link ">About
                         </a>
                     </li>
                 </ul>
