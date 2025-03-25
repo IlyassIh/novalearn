@@ -149,9 +149,10 @@ nav button a:hover {
     color: #1a2350;
 }
 .text-link {
-    color: var(--second-color);
+    color: var(--second-color) !important;
     font-weight: bold;
     text-decoration: none;
+    display: block;
 }
 .text-link:hover {
     text-decoration: underline;
@@ -338,6 +339,16 @@ main {
     color: #13375c;
 }
 
+.user-auth {
+    padding: 20px 12px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-content {
+    overflow: auto !important;
+    height: 100vh;
+}
 @media only screen and (max-width: 767px) {
     .espace {
       padding-right: calc(var(--bs-gutter-x) * .5);
