@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #212b5a;
+    --second-color: #dda537;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+}
+
+.thead-bg {
+    background-color: var(--second-color) !important;
+    color: white;
+}
+
+.card {
+    height: fit-content;
+}
+
