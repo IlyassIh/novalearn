@@ -76,7 +76,7 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <img src="../images/novalearn (2).png" alt="">
+                        <img src="../images/novalearn (2).png" alt="" class="mb-2">
                         <p>
                             Novalearn est un site web conçu pour des écoles privées, offrant des outils et des ressources pour faciliter la gestion éducative et l'apprentissage.
                         </p>

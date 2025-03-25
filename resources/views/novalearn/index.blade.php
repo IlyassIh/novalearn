@@ -77,7 +77,7 @@
                 <div class="col-md-6 mb-2 espace">
                     <input type="text" class="form-control" placeholder="Prénom*" required>
                 </div>
-                <div class="col-md-6 mb-2 espace">
+                <div class="col-md-6 mb-2 ">
                     <input type="text" class="form-control" placeholder="Nom*" required>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                 <div class="col-md-6 mb-2 espace">
                     <input type="tel" class="form-control" placeholder="Téléphone*" required>
                 </div>
-                <div class="col-md-6 mb-2 espace">
+                <div class="col-md-6 mb-2 ">
                     <input type="email" class="form-control" placeholder="Email*" required>
                 </div>
             </div>

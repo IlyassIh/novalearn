@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .espace {
     margin-right: 0 !important;
+    padding-right: 0px;
 }
 .active {
     color: var(--second-color) !important;
@@ -336,3 +337,9 @@ main {
 .box-card .box-header h4 {
     color: #13375c;
 }
+
+@media only screen and (max-width: 767px) {
+    .espace {
+      padding-right: calc(var(--bs-gutter-x) * .5);
+    }
+  }
