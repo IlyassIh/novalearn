@@ -1,6 +1,9 @@
 .card {
     height: 77vh;
 }
+.card:hover {
+    transform: none !important;
+}
 .card-header {
     background-color: var(--primary-color) !important;
 }
