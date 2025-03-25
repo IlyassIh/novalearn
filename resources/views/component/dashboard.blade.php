@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    
+
+    @yield('css')
+
     <title>Espace Etudiant</title>
 </head>
 <body>
@@ -28,7 +32,7 @@
 
                     <div class="link @yield('note')">
                         <i class="fa-solid fa-book"></i>
-                        <a href="#">Voire les notes</a>
+                        <a href="{{route('note.index')}}">Voire les notes</a>
                     </div>
 
 
@@ -40,7 +44,7 @@
 
                     <div class="link @yield('profile')">
                         <i class="fa-solid fa-user-graduate"></i>
-                        <a href="#">modifier le profile</a>
+                        <a href="{{route('profile.index')}}">modifier le profile</a>
                     </div>
 
 
@@ -48,13 +52,16 @@
                 </div>
                 <div class="logout btn btn-danger">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <a href="#" >Se Deconnecter</a>
+                    <a href="{{route('index')}}" >Se Deconnecter</a>
                 </div>
                 
             </nav>
 
         </div>
         <div class="main-content">
+            <div class="user-auth">
+                Bonjour, Your Name
+            </div>
             @yield('main-content')    
         </div>
     </main>
