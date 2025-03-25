@@ -1,5 +1,5 @@
 .card {
-    height: 77vh;
+    height: fit-content;
 }
 .card:hover {
     transform: none !important;
