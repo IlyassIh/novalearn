@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #212b5a;
+    --second-color: #dda537;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+}
+.card {
+    height: fit-content;
+}
+.card:hover {
+    transform: none !important;
+}
+.card-note {
+    width: 60%;
+}
+.last-notes{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.321);
+    
+}
