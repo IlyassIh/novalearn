@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Etudiant;
+use App\Http\Controllers\Home;
 use App\Http\Controllers\Note;
 use App\Http\Controllers\NovaController;
 use App\Http\Controllers\Profile;
@@ -15,7 +16,7 @@ Route::get('/novalearn/inscription', [NovaController::class, 'inscription'])->na
 
 Route::get('/novalearn/login', [NovaController::class, 'login'])->name('login');
 
-// Route::get('/novalearn/etudiant', [Etudiant::class, 'index'])->name('etudiant.index');
+Route::get('/novalearn/etudiant/accueil', [Home::class, 'index'])->name('accueil.index');
 
 Route::get('/novalearn/etudiant/notes', [Note::class, 'index'])->name('note.index');
 

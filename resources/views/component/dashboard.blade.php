@@ -27,7 +27,7 @@
                 <div class="side-links">
                     <div class="link @yield('home')">
                         <i class="fa-solid fa-house"></i>
-                        <a href="#">Accueil</a>
+                        <a href="{{route('accueil.index')}}">Accueil</a>
                     </div>
 
                     <div class="link @yield('note')">
