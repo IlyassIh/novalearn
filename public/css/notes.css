@@ -21,7 +21,22 @@
 select{
     border: 1px solid var(--primary-color) !important;
     border-radius: 10px;
-    
+    width: 400px !important;
+}
+.select-flex {
+    display: flex;
+    gap: 10px;
+}
+.table {
+    display: none;
+}
+.btn-success{
+    background-color: var(--second-color);
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: var(--second-color);
 }
 
 select:focus {
