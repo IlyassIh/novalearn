@@ -11,11 +11,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
+    <link rel="icon" href="/images/favicon.png">
 
     @yield('css')
 
-    <title>Espace Etudiant</title>
+    <title>Espace Etudiant @yield('')</title>
 </head>
 <body>
     <main>
@@ -38,7 +38,7 @@
 
                     <div class="link @yield('mois')">
                         <i class="fa-solid fa-calendar-days"></i>
-                        <a href="#">Voire les mois payés</a>
+                        <a href="{{route('mois.index')}}">Voire les mois payés</a>
                     </div>
 
 
@@ -59,7 +59,7 @@
 
         </div>
         <div class="main-content">
-            <div class="user-auth">
+            <div class="user-auth container">
                 Bonjour, Your Name
             </div>
             @yield('main-content')    
