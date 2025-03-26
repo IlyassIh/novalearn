@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #212b5a;
+    --second-color: #dda537;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+}
+.card {
+    height: fit-content;
+}
+.card:hover {
+    transform: none !important;
+}
+.m-bg {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.body-tr td {
+    color: var(--second-color);
+}
+
+.mois {
+    font-weight: 500;
+}

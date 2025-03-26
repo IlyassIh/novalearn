@@ -18,4 +18,13 @@
 .card:hover {
     transform: none !important;
 }
+select{
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 10px;
+    
+}
 
+select:focus {
+
+    box-shadow: none !important;
+}
