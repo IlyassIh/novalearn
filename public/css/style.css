@@ -245,11 +245,12 @@ footer img {
 }
 main {
     display: flex;
+    background-color: #fafafa
 }
 
 .side-navbar {
     background-color: var(--primary-color);
-    width: 15%;
+    width: 17%;
     height: 100vh;
     position: relative;
 }
@@ -257,7 +258,7 @@ main {
 .img-logo {
     width: 200px;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .img-logo img {
@@ -266,7 +267,7 @@ main {
 
 .side-links {
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -278,7 +279,6 @@ main {
 }
 
 .side-links div {
-    
     padding: 15px 10px;
 }
 
@@ -295,7 +295,7 @@ main {
 }
 .side-links div i {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .logout {
@@ -319,7 +319,7 @@ main {
 }
 
 .main-content {
-    width: 85%;
+    width: 83%;
     background-color: #fafafa;
 }
 
@@ -355,6 +355,17 @@ main {
 .link {
     cursor: pointer;
 }
+
+.dropdown-menu {
+    width: 100%;
+}
+.dropdown-item:hover {
+    background-color: rgb(248 249 250) !important;
+}
+.dropdown-item:focus {
+    background-color: rgb(248 249 250) !important;
+}
+
 @media only screen and (max-width: 767px) {
     .espace {
       padding-right: calc(var(--bs-gutter-x) * .5);

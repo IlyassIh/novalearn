@@ -53,7 +53,16 @@
                 </ul>
 
                 
-                <button class="btn btn-outline-success" type="submit"><a href="{{route('inscription')}}">Inscription</a></button>
+                <div class="dropdown">
+                    <button class="btn btn-outline-success dropdown-toggle text-light" type="button" id="compteDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Accès à votre compte
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="compteDropdown">
+                        <li><a class="dropdown-item" href="{{route('login')}}">Se connecter</a></li>
+                        <li><a class="dropdown-item" href="{{route('inscription')}}">S'inscrire</a></li>
+                    </ul>
+                </div>
+                
     
             </div>
         </div>
@@ -162,8 +171,9 @@
         
     </div>
     <!-- Footer -->
+    
 
-    <script src="src/js/bootstrap.min.js"></script>
+    <script src="/src/js/bootstrap.bundle.min.js"></script>
     <script src="/js/main.js"></script>
 </body>
 
