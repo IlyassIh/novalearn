@@ -255,10 +255,11 @@ main {
 }
 
 .img-logo {
-    width: 210px;
+    width: 200px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 70px;
 }
+
 .img-logo img {
     width: 100%;
 }
@@ -278,7 +279,7 @@ main {
 
 .side-links div {
     
-    padding: 10px 10px;
+    padding: 15px 10px;
 }
 
 
@@ -290,10 +291,11 @@ main {
     text-transform: capitalize;
     text-decoration: none;
     font-size: 18px;
-    margin-left: 3px;
+    margin-left: 10px;
 }
 .side-links div i {
     color: white;
+    font-size: 25px;
 }
 
 .logout {
@@ -348,6 +350,10 @@ main {
 .main-content {
     overflow: auto !important;
     height: 100vh;
+}
+
+.link {
+    cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
     .espace {

@@ -25,24 +25,24 @@
                     <img src="/images/novalearn (2).png" alt="">
                 </div>
                 <div class="side-links">
-                    <div class="link @yield('home')">
+                    <div class="link @yield('home')" onclick="window.location.href='{{route('accueil.index')}}'">
                         <i class="fa-solid fa-house"></i>
                         <a href="{{route('accueil.index')}}">Accueil</a>
                     </div>
 
-                    <div class="link @yield('note')">
+                    <div class="link @yield('note')" onclick="window.location.href='{{route('note.index')}}'">
                         <i class="fa-solid fa-book"></i>
                         <a href="{{route('note.index')}}">Voire les notes</a>
                     </div>
 
 
-                    <div class="link @yield('mois')">
+                    <div class="link @yield('mois')" onclick="window.location.href='{{route('mois.index')}}'">
                         <i class="fa-solid fa-calendar-days"></i>
                         <a href="{{route('mois.index')}}">Voire les mois payés</a>
                     </div>
 
 
-                    <div class="link @yield('profile')">
+                    <div class="link @yield('profile')" onclick="window.location.href='{{route('accueil.index')}}'">
                         <i class="fa-solid fa-user-graduate"></i>
                         <a href="{{route('profile.index')}}">modifier le profile</a>
                     </div>
@@ -50,9 +50,9 @@
 
                     
                 </div>
-                <div class="logout btn btn-danger">
+                <div class="logout btn btn-danger" onclick="window.location.href='{{route('login')}}'">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <a href="{{route('index')}}" >Se Deconnecter</a>
+                    <a href="{{route('login')}}" >Se Deconnecter</a>
                 </div>
                 
             </nav>
