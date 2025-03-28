@@ -1,6 +1,7 @@
-@extends('component.dashboard-etudiant')
+@extends('component.dashboard-prof')
 @section('profile') clicked @endsection
-@section('css') <link rel="stylesheet" href="/css/profile.css"> @endsection
+@section('M-Mme') M/Mme @endsection
+@section('css') <link rel="stylesheet" href="/css/profCss/profile-prof.css"> @endsection
 
 @section('main-content')
 <div class="container mt-3 c1">
@@ -12,31 +13,31 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="nom" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" placeholder="Elboussoughti" disabled>
+                        <input type="text" class="form-control" id="nom" placeholder="Chemam" disabled>
                     </div>
                     <div class="col-md-6">
                         <label for="prenom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" placeholder="Mohammed" disabled>
+                        <input type="text" class="form-control" id="prenom" placeholder="Driss" disabled>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="cni" class="form-label">CNI</label>
-                        <input type="text" class="form-control" id="cni" placeholder="AM7777" disabled>
+                        <input type="text" class="form-control" id="cni" placeholder="AB1234" disabled>
                     </div>
                     <div class="col-md-6">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="hacker.x@gmail.com">
+                        <input type="email" class="form-control" id="email" placeholder="drisschemam@gmail.com">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="telephone" class="form-label">Téléphone</label>
-                    <input type="tel" class="form-control" id="telephone" placeholder="0611223344">
+                    <input type="tel" class="form-control" id="telephone" placeholder="0655667788">
                 </div>
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                     <label for="niveau_etude" class="form-label">Niveau d'étude</label>
-                    <input type="text" class="form-control" id="niveau_etude" placeholder="TS-Dev" disabled>
-                </div>
+                    <input type="text" class="form-control" id="niveau_etude" placeholder="Entrez votre niveau d'étude" disabled>
+                </div> --}}
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="password" class="form-label">Mot de passe</label>
