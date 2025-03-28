@@ -7,20 +7,27 @@
     background-color: var(--primary-color);
 }
 
-.thead-bg {
-    background-color: var(--second-color) !important;
-    color: white;
-}
-
 .card {
     height: fit-content;
 }
+
 .card:hover {
     transform: none !important;
 }
-.card-body {
-    height: fit-content !important;
+.table {
+    display: none;
 }
+.save {
+    border: none;
+    background-color: var(--primary-color) !important;
+    color: white;
+    display: none;
+}
+
+.save:hover {
+    color: white;
+}
+
 select{
     border: 1px solid var(--primary-color) !important;
     border-radius: 10px;
@@ -30,9 +37,7 @@ select{
     display: flex;
     gap: 10px;
 }
-.table {
-    display: none;
-}
+
 .btn-success{
     background-color: var(--second-color) !important;
     border: none;

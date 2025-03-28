@@ -25,26 +25,20 @@
                     <img src="/images/novalearn (2).png" alt="">
                 </div>
                 <div class="side-links">
-                    <div class="link @yield('home')" onclick="window.location.href='{{route('accueil.index')}}'">
-                        <i class="fa-solid fa-house"></i>
-                        <a href="{{route('accueil.index')}}">Accueil</a>
+                    <div class="link @yield('ajouter-notes')" onclick="window.location.href='{{route('add-notes-prof.index')}}'">
+                        <i class="fas fa-book-open"></i>
+                        <a href="{{route('add-notes-prof.index')}}">Entrer les notes</a>
                     </div>
 
-                    <div class="link @yield('note')" onclick="window.location.href='{{route('note.index')}}'">
-                        <i class="fa-solid fa-book"></i>
-                        <a href="{{route('note.index')}}">Voire les notes</a>
-                    </div>
-
-
-                    <div class="link @yield('mois')" onclick="window.location.href='{{route('mois.index')}}'">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <a href="{{route('mois.index')}}">Voire les mois payés</a>
+                    <div class="link @yield('ajouter-cours')" onclick="window.location.href='{{route('cours.index')}}'">
+                        <i class="fas fa-plus-circle"></i>
+                        <a href="{{route('cours.index')}}">Ajouter les cours</a>
                     </div>
 
 
-                    <div class="link @yield('profile')" onclick="window.location.href='{{route('accueil.index')}}'">
+                    <div class="link @yield('profile')" onclick="window.location.href='{{route('profile-prof.index')}}'">
                         <i class="fa-solid fa-user-graduate"></i>
-                        <a href="{{route('profile.index')}}">modifier le profile</a>
+                        <a href="{{route('profile-prof.index')}}">modifier le profile</a>
                     </div>
 
 
@@ -60,7 +54,7 @@
         </div>
         <div class="main-content">
             <div class="user-auth container">
-                Bonjour, Your Name
+                Bonjour, @yield('M-Mme')Your Name !
             </div>
             @yield('main-content')    
         </div>
@@ -71,7 +65,7 @@
 
 
 
-    <script src="src/js/bootstrap.min.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

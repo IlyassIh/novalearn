@@ -1,5 +1,7 @@
+// ===================================================== Start js for index page ================================================
+
 let pictures = document.querySelector(".hero-section");
-// slider witch images
+
 let images = ["slide-miage-1.jpg", "slide-miage-2.jpg", "slide-miage-3.jpg"];
 let index = 0;
 setInterval(() => {
@@ -9,10 +11,15 @@ setInterval(() => {
 
 }, 5000);
 
+// ===================================================== End js for index page ================================================
+
+
+// ===================================================== Start js for etudiant page ================================================
+
+let select = document.getElementById('select-s');
 let s1 = document.querySelector('.s1');
 let s2 = document.querySelector('.s2');
 let search = document.querySelector('.search');
-let select = document.getElementById('select-s');
 
 search.addEventListener('click', ()=> {
     if (select.value === 's1') {
@@ -29,4 +36,35 @@ search.addEventListener('click', ()=> {
         
         s1.style.display = 'none';
     }
-})
+});
+
+// ===================================================== End js for etudiant page ================================================
+
+// ===================================================== Start js for prof page ================================================
+
+let choice = document.getElementById('select-s');
+let dev = document.querySelector('.dev');
+let reseau = document.querySelector('.reseau');
+let save = document.querySelector('.save');
+let recherche = document.querySelector('.recherche');
+
+
+search.addEventListener('click', ()=>{
+    if (choice.value === 'dev') {
+        dev.style.display = 'table';
+        reseau.style.display = 'none';
+        save.style.display = 'block';
+    }
+    
+    else if (choice.value === 'reseau') {
+        dev.style.display = 'none';
+        reseau.style.display = 'table';
+        save.style.display = 'block';
+    }
+    else {
+        dev.style.display = 'none';
+        reseau.style.display = 'none';
+    }
+});
+
+// ===================================================== End js for etudiant page ================================================

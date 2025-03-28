@@ -6,22 +6,11 @@
 .card-header {
     background-color: var(--primary-color);
 }
+
 .card {
     height: fit-content;
 }
+
 .card:hover {
     transform: none !important;
-}
-.m-bg {
-    background-color: var(--second-color);
-    color:var(--primary-color);
-}
-
-.body-tr td {
-    color: var(--second-color);
-}
-
-.mois {
-
-    font-weight: 500;
 }
