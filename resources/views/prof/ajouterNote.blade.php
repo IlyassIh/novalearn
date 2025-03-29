@@ -38,14 +38,22 @@
         <div class="card-header text-white">Entrer les notes des matières</div>
         <div class="card-body">
             <div class="mb-3">
-                <label for="select-s" class="form-label">Choisir la spécialité</label>
+                <label for="select-s" class="form-label">Choisir la filiere </label>
                 <div class="select-flex">
-                    <select class="form-select" id="select-s" name="select-s">
-                        <option value="" selected disabled>-- Sélectionner -- </option>
+                    <select class="form-select" id="filiere" name="select-s">
+                        <option value="" selected disabled>-- Sélectionner la filiere -- </option>
                         <option value="dev">Developpement Informatique</option>
                         <option value="reseau">Reseau</option>
-                        
                     </select>
+
+                    <select class="form-select" disabled id="matiere" name="select-s">
+                        <option value="" selected disabled>-- Sélectionner la matiere -- </option>
+                        <option value="dev">PHP</option>
+                        <option value="reseau">HTML</option>
+                        <option value="reseau">CSS</option>
+                    </select>
+
+                    
                     <span class="btn btn-success search"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
             </div>
