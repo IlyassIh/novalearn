@@ -4,6 +4,8 @@ use App\Http\Controllers\AjouterNoteProf;
 use App\Http\Controllers\CoursEtudiant;
 use App\Http\Controllers\CoursProf;
 use App\Http\Controllers\Etudiant;
+use App\Http\Controllers\GestionEtudiant;
+use App\Http\Controllers\GestionProf;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\Note;
 use App\Http\Controllers\NovaController;
@@ -35,3 +37,7 @@ Route::get('/novalearn/prof/profile', [ProfileProf::class, 'index'])->name('prof
 Route::get('/novalearn/prof/cours', [CoursProf::class, 'index'])->name('cours.index');
 
 Route::get('/novalearn/etudiant/cours', [CoursEtudiant::class, 'index'])->name('cours-etudiant.index');
+
+Route::get('/novalearn/admin/gestion-prof', [GestionProf::class, 'index'])->name('admin-gestion-prof.index');
+
+Route::get ('/novalearn/admin/gestion-etudiant', [GestionEtudiant::class, 'index'])->name('admin-gestion-etudiant.index');

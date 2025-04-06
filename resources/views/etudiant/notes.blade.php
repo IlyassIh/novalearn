@@ -3,6 +3,10 @@
     clicked
 @endsection
 
+@section('js') 
+    <script src="/js/etudiant.js"></script>
+@endsection
+
 @section('css')
     <link rel="stylesheet" href="/css/notes.css">
 @endsection

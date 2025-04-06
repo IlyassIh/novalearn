@@ -2,6 +2,7 @@
 @section('M-Mme')M/Mme @endsection
 @section('css') <link rel="stylesheet" href="/css/profCss/ajouter-notes.css"> @endsection
 @section('ajouter-notes') clicked @endsection
+@section('js') <script src="/js/prof.js"></script> @endsection
 @section('main-content')
 <div class="container mt-3">
     <div class="card">
@@ -76,7 +77,7 @@
                         
                         <tr>
                             <td><input type="text" class="form-control" name="nom_etudiant[]" placeholder="Elboussoughti Mohammed" disabled></td>
-                            <td><input type="text" class="form-control" name="matiere[]" placeholder="HTML" disabled></td>
+                            <td><input type="text" class="form-control" name="matiere[]" placeholder="JAVA" disabled></td>
                             <td><input type="number" class="form-control" name="note[]" step="0.01" placeholder="Note"></td>
                         </tr>
 
