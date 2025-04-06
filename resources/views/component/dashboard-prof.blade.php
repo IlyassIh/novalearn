@@ -15,7 +15,7 @@
 
     @yield('css')
 
-    <title>Espace Etudiant @yield('')</title>
+    <title>Espace Prof</title>
 </head>
 <body>
     <main>
@@ -65,7 +65,7 @@
 
 
 
-    <script src="src/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/src/js/bootstrap.bundle.min.js"></script>
+    @yield('js')
 </body>
 </html>

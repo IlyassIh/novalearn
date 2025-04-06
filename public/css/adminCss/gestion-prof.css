@@ -1,0 +1,48 @@
+:root {
+    --primary-color: #212b5a;
+    --second-color: #dda537;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+}
+
+.card {
+    height: fit-content;
+}
+
+.card:hover {
+    transform: none !important;
+}
+
+select{
+    border: 1px solid #ced4da !important;
+    border-radius: 10px !important;
+}
+
+.button-add {
+    width: 100%;
+    text-align: right;
+}
+
+.thead-bg {
+    background-color: var(--second-color) !important;
+    color: white;
+}
+.add-prof {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    display: none;
+    width: 700px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.355);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    display: none;
+}

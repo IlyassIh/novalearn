@@ -1,5 +1,8 @@
 @extends('component.main')  
 @section('content')
+@section('js')  
+    <script src="/js/main.js"></script>
+@endsection
 <section class="hero-section" id="ecole">
     <div class="container center-c">
         <h1>Inscriptions Ouvertes</h1>
