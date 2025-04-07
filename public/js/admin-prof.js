@@ -1,6 +1,7 @@
 const cardProf = document.querySelector(".add-prof");
-
+const modifierProf = document.querySelector(".modifier-prof");
 const addProf = document.querySelector(".add");
+const btnModifier = document.querySelectorAll(".modifier");
 const annuler = document.querySelector(".annuler");
 const overlay = document.querySelector(".overlay");
 
@@ -17,4 +18,12 @@ annuler.addEventListener("click", function () {
 overlay.addEventListener("click", function () {
     cardProf.style.display = "none";
     overlay.style.display = "none";
+    modifierProf.style.display = "none";
+});
+
+btnModifier.forEach((btn) => {
+    btn.addEventListener("click", function () {
+        modifierProf.style.display = "block";
+        overlay.style.display = "block";
+    });
 });

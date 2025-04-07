@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #212b5a;
+    --second-color: #dda537;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+}
+
+.thead-bg {
+    background-color: var(--second-color) !important;
+    color: white;
+}
+
+.card {
+    height: fit-content;
+}
+.card:hover {
+    transform: none !important;
+}
+.card-body {
+    height: fit-content !important;
+}
+
+.thead-bg {
+    background-color: var(--second-color) !important;
+    color: white;
+}
+
+select{
+    border: 1px solid #ced4da !important;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px !important;
+}
+
+select:focus {
+    box-shadow: none !important;
+}
+
+
+
+input:focus {
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+}

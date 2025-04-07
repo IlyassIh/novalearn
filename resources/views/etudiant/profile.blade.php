@@ -7,8 +7,8 @@
     <div class="card">
         <div class="card-header bg-primary text-white">Profil</div>
         <div class="card-body c-body">
+            {{------------------------------------------- form to take information from user -----------------------------}}
             <form>
-                
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="nom" class="form-label">Nom</label>
@@ -49,6 +49,7 @@
                 </div>
                 <button type="submit" class="btn save-profile">Enregistrer</button>
             </form>
+            {{----------------------------------------------------- end of form ------------------------------------------}}
         </div>
     </div>
 </div>

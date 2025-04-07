@@ -36,15 +36,20 @@
                     </div>
 
 
-                    <div class="link @yield('admine-consultation')" onclick="window.location.href='{{route('mois.index')}}'">
+                    <div class="link @yield('admin-consultation')" onclick="window.location.href='{{route('admin-consultation.index')}}'">
                         <i class="fa-solid fa-eye"></i>
-                        <a href="{{route('mois.index')}}">Consultation</a>
+                        <a href="{{route('admin-consultation.index')}}">Consultation</a>
                     </div>
 
 
-                    <div class="link @yield('admin-search')" onclick="window.location.href='{{route('accueil.index')}}'">
+                    {{-- <div class="link @yield('admin-search')" onclick="window.location.href='{{route('accueil.index')}}'">
                         <i class="fa-solid fa-search"></i>
                         <a href="{{route('profile.index')}}">Rechercher</a>
+                    </div> --}}
+
+                    <div class="link @yield('admin-approuve')" onclick="window.location.href='{{route('admin-validation.index')}}'">
+                        <i class="fa-solid fa-user-check"></i>
+                        <a href="{{route('admin-validation.index')}}">Validation</a>
                     </div>
 
                     

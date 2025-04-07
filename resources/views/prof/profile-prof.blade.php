@@ -8,6 +8,7 @@
     <div class="card">
         <div class="card-header bg-primary text-white">Profil</div>
         <div class="card-body c-body">
+            {{------------------------------------------- form to take information from prof ---------------------}}
             <form>
                 
                 <div class="row mb-3">
@@ -50,6 +51,7 @@
                 </div>
                 <button type="submit" class="btn save-profile">Enregistrer</button>
             </form>
+            {{--------------------------------------------- End form to take information from prof --------------------- --}}
         </div>
     </div>
 </div>
