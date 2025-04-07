@@ -136,5 +136,58 @@
             </div>
         </div>
 
+        <div class="card modifier-prof" style="max-width: 800px; margin: auto;">
+            <div class="card-header text-white p-3 ps-4 pe-4">
+                Modifier un Professeur
+            </div>
+            <div class="card-body p-3 ps-4 pe-4">
+                {{-- --------------------------------- form to add un etudiant ------------------------------------------- --}}
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="cni" class="form-label">CNI</label>
+                            <input type="text" class="form-control" id="cni" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="telephone" class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" id="telephone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="niveau" class="form-label">Matiere</label>
+                            <select class="form-select" id="matiere" required>
+                                <option value="">-- Sélectionner --</option>
+                                <option>PHP</option>
+                                <option>JAVA</option>
+                                <option>VB</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success ">Modifier</button>
+                    <button type="submit" class="btn btn-danger annuler ">Annuler</button>
+                </form>
+                {{-- --------------------------------- End form to add un etudiant ------------------------------------------- --}}
+            </div>
+        </div>
+
     </div>
 @endsection
