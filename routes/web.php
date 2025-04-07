@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AjouterNoteProf;
+use App\Http\Controllers\Consultation;
 use App\Http\Controllers\CoursEtudiant;
 use App\Http\Controllers\CoursProf;
 use App\Http\Controllers\Etudiant;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mois;
 use App\Http\Controllers\ProfileProf;
+use App\Http\Controllers\Validation;
 
 Route::get('/', [NovaController::class, 'index'])->name('index');
 
@@ -41,3 +43,7 @@ Route::get('/novalearn/etudiant/cours', [CoursEtudiant::class, 'index'])->name('
 Route::get('/novalearn/admin/gestion-prof', [GestionProf::class, 'index'])->name('admin-gestion-prof.index');
 
 Route::get ('/novalearn/admin/gestion-etudiant', [GestionEtudiant::class, 'index'])->name('admin-gestion-etudiant.index');
+
+Route::get('/novalearn/admin/validation', [Validation::class, 'index'])->name('admin-validation.index');
+
+Route::get('/novalearn/admin/consultation', [Consultation::class, 'index'])->name('admin-consultation.index');

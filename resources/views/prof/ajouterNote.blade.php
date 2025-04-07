@@ -58,6 +58,7 @@
                     <span class="btn btn-success search"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
             </div>
+            {{----------------------------------------------- form for prof to enter notes ---------------------------}}
             <form>
                 <table class="table dev table-bordered">
                     <thead>
@@ -123,6 +124,7 @@
                 </table>
                 <button type="submit" class="btn btn-primary save">Soumettre</button>
             </form>
+            {{-- ----------------------------------------------- end form for prof to enter notes --------------------------- --}}
         </div>
     </div>
     
