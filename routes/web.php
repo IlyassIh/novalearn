@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Mois;
 use App\Http\Controllers\ProfileProf;
 use App\Http\Controllers\Validation;
+use App\Http\Controllers\Logout;
 
 Route::get('/', [NovaController::class, 'index'])->name('index');
 
@@ -47,3 +48,9 @@ Route::get ('/novalearn/admin/gestion-etudiant', [GestionEtudiant::class, 'index
 Route::get('/novalearn/admin/validation', [Validation::class, 'index'])->name('admin-validation.index');
 
 Route::get('/novalearn/admin/consultation', [Consultation::class, 'index'])->name('admin-consultation.index');
+
+Route::get('/logout', [Logout::class, 'destroy'])->name('logout');
+
+Route::post('/novalearn/inscription/post', [NovaController::class, 'store'])->name('etudiant.store');
+
+Route::post('/novalearn/login/post', [NovaController::class, 'storeLogin'])->name('etudiant.storeLogin');
