@@ -21,7 +21,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="niveau-etude" class="form-label" >Niveau d'étude</label>
-                        <input type="text" class="form-control" id="niveau-etude" name="niveau-etude" disabled placeholder="1er Annee TS-Dev">
+                        <input type="text" class="form-control" id="niveau-etude" name="niveau-etude" disabled placeholder="{{session('filier')}}">
                     </div>
                     <div class="col-md-6">
                         <label for="groupe" class="form-label" >Groupe</label>

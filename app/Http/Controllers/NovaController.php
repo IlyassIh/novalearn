@@ -114,32 +114,30 @@ class NovaController extends Controller
         $cni = $request->cni;
         $password = $request->password;
 
-        $request->validate([
-            'cni' => 'required|alpha_num|max:10',        
-            'password' => 'required|min:8',                
-        ], [
-            'cni.required' => 'Le CNI est obligatoire.',
-            'cni.alpha_num' => 'Le CNI doit contenir uniquement des lettres et des chiffres.',
-            'cni.max' => 'Le CNI doit contenir maximum 10 caractères.',
+    $credentials = ['cni' => $cni, 'password' => $password];
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+
+        $etudiant = Auth::user()->etudiant;
+
+        if ($etudiant) {
+            session([
+                'cni' => strtoupper($cni),
+                'nom' => ucfirst($etudiant->nom),
+                'prenom' => ucfirst($etudiant->prenom),
+                'email' => $etudiant->email,
+                'telephone' => $etudiant->telephone,
+                'filier' => $etudiant->filier->filier,
+            ]);
+        }
         
-            'password.required' => 'Le mot de passe est obligatoire.',
-            'password.min' => 'Le mot de passe doit contenir au moins 8 caractères.',
-        ]
-    );
+        return to_route('accueil.index');
+    }
+    else {
 
-    $user = DB::table('users')
-    ->join('etudiants', 'users.cni', '=', 'etudiants.cni')
-    ->where('users.cni', strtoupper($cni))
-    ->first();
+        return back()->withErrors(['password' => 'CNI ou mot de passe incorrect']);
+    }   
 
-if ($user && Hash::check($password, $user->password)) {
-    Auth::loginUsingId($user->id);
-    $request->session()->regenerate();
-    session(['cni' => $user->cni, 'nom' => $user->nom, 'prenom' => $user->prenom]);
-    return to_route('accueil.index');
-}
-
-return back()->withErrors(['password' => 'CNI ou mot de passe incorrect']);
 }
 
 }

@@ -18,18 +18,11 @@ class Etudiant extends Model
         'centre',
         'filiere_id',
     ];
-    protected $table = 'etudiants';
     
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 
-    public function getAuthIdentifierName()
+    public function filier()
     {
-        return 'cni';
+        return $this->belongsTo(Filier::class, 'filiere_id');
     }
 }

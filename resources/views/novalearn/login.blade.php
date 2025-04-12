@@ -28,6 +28,9 @@
 
                     <div class="row gap-1 mb-2">
                         <input class="col col-lg-12 col-sm-12 col-12 p-2" type="password" name="password" placeholder="Mot de passe*" required>
+                        @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                     </div>
 
                     

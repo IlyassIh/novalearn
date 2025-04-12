@@ -19,6 +19,9 @@
 </head>
 <body>
     <main>
+        @auth
+            
+        
         <div class="side-navbar">
             <nav>
                 <div class="img-logo">
@@ -42,7 +45,7 @@
                     </div>
 
 
-                    <div class="link @yield('profile')" onclick="window.location.href='{{route('accueil.index')}}'">
+                    <div class="link @yield('profile')" onclick="window.location.href='{{route('profile.index')}}'">
                         <i class="fa-solid fa-user-graduate"></i>
                         <a href="{{route('profile.index')}}">modifier le profile</a>
                     </div>
@@ -57,7 +60,7 @@
 
                     
                 </div>
-                <div class="logout btn btn-danger" onclick="window.location.href='{{route('login')}}'">
+                <div class="logout btn btn-danger" onclick="window.location.href='{{route('logout')}}'">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <a href="{{route('logout')}}" >Se Deconnecter</a>
                 </div>
@@ -71,6 +74,7 @@
             </div>
             @yield('main-content')    
         </div>
+        @endauth
     </main>
 
 
