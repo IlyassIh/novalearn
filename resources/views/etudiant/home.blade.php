@@ -10,11 +10,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="nom" class="form-label" >Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" disabled placeholder="{{ session('nom')}}">
+                        <input type="text" class="form-control" id="nom" name="nom" disabled placeholder="Elboussoughti">
                     </div>
                     <div class="col-md-6">
                         <label for="prenom" class="form-label" >Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" disabled placeholder="{{session('prenom')}}">
+                        <input type="text" class="form-control" id="prenom" name="prenom" disabled placeholder="Mohammed">
                     </div>
                 </div>
         

@@ -15,8 +15,7 @@
 
     <section class="signup w-100 pt-4">
         <div class="container w-25">
-            <form method="post" action="{{route('etudiant.storeLogin')}}">
-                @csrf
+            <form method="post">
                 <h3 class="text-center">Bienvenue!</h3>
                 <p class="text-center">NovaLearn vous souhaite la bienvenue, veuillez indiquer le centre de votre choix
                     NovaLearn Rabat, NovaLearn Rabat Ville ou NovaLearn Salé.</p>
