@@ -17,4 +17,7 @@ color: white;
 .save-profile:hover {
     color: white;
 }
+.profile-hide {
+    display: none;
+}
 

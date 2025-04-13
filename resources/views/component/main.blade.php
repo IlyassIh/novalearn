@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/src/css/bootstrap.min.css">
-
+    
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
     @yield('css')
 
 
@@ -74,27 +74,17 @@
 
     @yield('content')
 
-    <!-- Footer -->
     <footer class=" text-center text-lg-start  text-muted">
-        <!-- Section: Social media -->
-        <!-- Section: Links  -->
         <section class="container">
             <div class="container text-center text-md-start mt-2">
-                <!-- Grid row -->
                 <div class="row mt-3">
-                    <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
                         <img src="../images/novalearn (2).png" alt="" class="mb-2">
                         <p>
                             Novalearn est un site web conçu pour des écoles privées, offrant des outils et des ressources pour faciliter la gestion éducative et l'apprentissage.
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-2">
                             Nos Formations
                         </h6>
@@ -111,11 +101,8 @@
                             <a href="#!" class="text-reset"><span>></span> Gestion des Entreprises</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
 
-                    <!-- Grid column -->
                     <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-2">
                             Comment m'y rendre
                         </h6>
@@ -129,11 +116,9 @@
                             <a href="#!" class="text-reset">NovaLearn Salé</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
 
-                    <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
+
                         <h6 class="text-uppercase fw-bold mb-2">Lien utiles</h6>
                         <p>
                             <a href="#!" class="text-reset"><span>></span> 
@@ -156,20 +141,17 @@
                             <a href="#!" class="text-reset"><span>></span> Pré-inscription</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
+
                 </div>
-                <!-- Grid row -->
+
             </div>
         </section>
-        <!-- Section: Links  -->
 
-        <!-- Copyright -->
-        <!-- Copyright -->
     </footer>
     <div class="text-center p-1" style="background-color: rgb(255, 255, 255);">
         © 2025 - Groupe NovaLearn | Conception réalisation par Ilyass Ihassane - Mohamed ElBoussoughti
     </div>
-    <!-- Footer -->
+
     
 
     <script src="/src/js/bootstrap.bundle.min.js"></script>

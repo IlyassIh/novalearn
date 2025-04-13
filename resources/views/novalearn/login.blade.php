@@ -1,5 +1,5 @@
 @extends('component.main')  
-
+@section('js') <script src="/js/login.js"></script> @endsection
 @section('css')
     <link rel="stylesheet" href="/css/login.css">
 @endsection
@@ -8,12 +8,16 @@
 
     <section class="element bg-light d-flex justify-content-center align-items-center flex-column">
         <div class="container text-center">
+            <div class="message alert alert-success text-start d-flex justify-content-between mt-3">
+                <div>Vous avez bien cree votre compte.</div>
+                <div class="xMark"><i class="fa-solid fa-xmark"></i></div>
+            </div>
             <p class="mb-0">Groupe NovaLearn</p>
             <h2 class="mt-0">Se Connecter</h2>
         </div>
     </section>
 
-    <section class="signup w-100 pt-4">
+    <section class="signup w-100 pt-4" style="height: calc(100vh - 283px)">
         <div class="container w-25">
             <form method="post">
                 <h3 class="text-center">Bienvenue!</h3>
