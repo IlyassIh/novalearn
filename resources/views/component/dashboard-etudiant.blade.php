@@ -42,7 +42,7 @@
                     </div>
 
 
-                    <div class="link @yield('profile')" onclick="window.location.href='{{route('accueil.index')}}'">
+                    <div class="link @yield('profile')" onclick="window.location.href='{{route('profile.index')}}'">
                         <i class="fa-solid fa-user-graduate"></i>
                         <a href="{{route('profile.index')}}">modifier le profile</a>
                     </div>
@@ -67,9 +67,16 @@
         </div>
         <div class="main-content">
             <div class="user-auth container">
-                Bonjour, Your Name
+                Bonjour, {{$etudiant->nom}} {{$etudiant->prenom}}!
             </div>
             <div class="container mt-3">
+                @if (Session()->has('success'))
+
+            <div class="message alert alert-success text-start d-flex justify-content-between mt-3">
+                <div>{{Session('success')}}</div>
+                <div class="xMark"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            @endif
                 <div class="card profile-hide">
                     <div class="card-header text-white">@yield('title-card')</div>
                     <div class="card-body">
@@ -77,18 +84,18 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="nom" class="form-label" >Nom</label>
-                                    <input type="text" class="form-control" id="nom" name="nom" disabled placeholder="Elboussoughti">
+                                    <input type="text" class="form-control" id="nom" name="nom" disabled placeholder="{{$etudiant->nom}}">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="prenom" class="form-label" >Prénom</label>
-                                    <input type="text" class="form-control" id="prenom" name="prenom" disabled placeholder="Mohammed">
+                                    <input type="text" class="form-control" id="prenom" name="prenom" disabled placeholder="{{$etudiant->prenom}}">
                                 </div>
                             </div>
                     
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="niveau-etude" class="form-label" >Niveau d'étude</label>
-                                    <input type="text" class="form-control" id="niveau-etude" name="niveau-etude" disabled placeholder="1er Annee TS-Dev">
+                                    <input type="text" class="form-control" id="niveau-etude" name="niveau-etude" disabled placeholder="{{$etudiant->filiere->nom}}">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="groupe" class="form-label" >Groupe</label>
@@ -98,6 +105,7 @@
                         
                     </div>
                 </div>
+                
             @yield('main-content')   
             </div> 
         </div>

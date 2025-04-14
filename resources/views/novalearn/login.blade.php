@@ -8,10 +8,14 @@
 
     <section class="element bg-light d-flex justify-content-center align-items-center flex-column">
         <div class="container text-center">
+            @if (Session()->has('success'))
+
             <div class="message alert alert-success text-start d-flex justify-content-between mt-3">
-                <div>Vous avez bien cree votre compte.</div>
+                <div>{{Session('success')}}</div>
                 <div class="xMark"><i class="fa-solid fa-xmark"></i></div>
             </div>
+            @endif
+            
             <p class="mb-0">Groupe NovaLearn</p>
             <h2 class="mt-0">Se Connecter</h2>
         </div>
@@ -19,7 +23,8 @@
 
     <section class="signup w-100 pt-4" style="height: calc(100vh - 283px)">
         <div class="container w-25">
-            <form method="post">
+            <form method="post" action="{{ route('login.store') }}">
+                @csrf
                 <h3 class="text-center">Bienvenue!</h3>
                 <p class="text-center">NovaLearn vous souhaite la bienvenue, veuillez indiquer le centre de votre choix
                     NovaLearn Rabat, NovaLearn Rabat Ville ou NovaLearn Salé.</p>

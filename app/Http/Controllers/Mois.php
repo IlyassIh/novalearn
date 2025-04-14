@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Mois extends Controller
 {
     function index () {
-        return view('etudiant.mois');
+        $etudiant = Auth::user()->etudiant;
+        return view('etudiant.mois', compact('etudiant'));
     }
 }

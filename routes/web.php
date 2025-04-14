@@ -47,3 +47,7 @@ Route::get ('/novalearn/admin/gestion-etudiant', [GestionEtudiant::class, 'index
 Route::get('/novalearn/admin/validation', [Validation::class, 'index'])->name('admin-validation.index');
 
 Route::get('/novalearn/admin/consultation', [Consultation::class, 'index'])->name('admin-consultation.index');
+
+Route::post('/novalearn/inscription/inscription/store', [NovaController::class, 'create'])->name('etudiant.create');
+
+Route::post('/novalearn/login/login/store', [NovaController::class, 'loginStore'])->name('login.store');
