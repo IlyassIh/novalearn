@@ -79,35 +79,36 @@
             </div>
             <div class="card-body p-3 ps-4 pe-4">
                 {{------------------------ form to add un prof --------------------------------}}
-                <form>
+                <form  method="post" action="{{route('prof.create')}}">
+                    @csrf
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="cni" class="form-label">CNI</label>
-                            <input type="text" class="form-control" id="cni" required>
+                            <input type="text" class="form-control" id="cni" name="cni" required>
                         </div>
                         <div class="col-md-6">
                             <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="nom" required>
+                            <input type="text" class="form-control" id="nom" name="nom" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" required>
+                            <input type="text" class="form-control" id="prenom" name="prenom" required>
                         </div>
                         <div class="col-md-6">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="telephone" class="form-label">Téléphone</label>
-                            <input type="tel" class="form-control" id="telephone" required>
+                            <input type="tel" class="form-control" id="telephone" name="telephone" required>
                         </div>
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             <label for="niveau" class="form-label">Matiere</label>
                             <select class="form-select" id="matiere" required>
                                 <option value="">-- Sélectionner --</option>
@@ -115,22 +116,22 @@
                                 <option>JAVA</option>
                                 <option>VB</option>
                             </select>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="password" class="form-label">Mot de passe</label>
-                            <input type="password" class="form-control" id="password" required>
+                            <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         <div class="col-md-6">
                             <label for="confirmPassword" class="form-label">Confirmer mot de passe</label>
-                            <input type="password" class="form-control" id="confirmPassword" required>
+                            <input type="password" class="form-control" name="confirmation_password" required>
                         </div>
                     </div>
 
                     <button type="submit" class="btn btn-success ">Ajouter</button>
-                    <button type="submit" class="btn btn-danger annuler ">Annuler</button>
+                    <button class="btn btn-danger annuler ">Annuler</button>
                 </form>
                 {{-- ----------------------- End form to add un prof ------------------------------- --}}
             </div>
@@ -142,33 +143,34 @@
             </div>
             <div class="card-body p-3 ps-4 pe-4">
                 {{-- --------------------------------- form to add un etudiant ------------------------------------------- --}}
-                <form>
+                <form">
+                    @csrf
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="cni" class="form-label">CNI</label>
-                            <input type="text" class="form-control" id="cni" required>
+                            <input type="text" class="form-control" name="cni" id="cni" required>
                         </div>
                         <div class="col-md-6">
                             <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="nom" required>
+                            <input type="text" class="form-control" name="nom" id="nom" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" required>
+                            <input type="text" class="form-control" name="prenom" id="prenom" required>
                         </div>
                         <div class="col-md-6">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" name="email" id="email" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="telephone" class="form-label">Téléphone</label>
-                            <input type="tel" class="form-control" id="telephone" required>
+                            <label for="telephone" class="form-label" >Téléphone</label>
+                            <input type="tel" class="form-control" id="telephone" name="telephone" required>
                         </div>
                         <div class="col-md-6">
                             <label for="niveau" class="form-label">Matiere</label>
@@ -183,7 +185,7 @@
 
 
                     <button type="submit" class="btn btn-success ">Modifier</button>
-                    <button type="submit" class="btn btn-danger annuler ">Annuler</button>
+                    <button class="btn btn-danger annuler ">Annuler</button>
                 </form>
                 {{-- --------------------------------- End form to add un etudiant ------------------------------------------- --}}
             </div>

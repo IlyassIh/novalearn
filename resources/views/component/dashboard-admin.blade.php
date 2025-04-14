@@ -65,8 +65,9 @@
         </div>
         <div class="main-content">
             <div class="user-auth container">
-                Bonjour, Your Name
+                Bonjour, admin
             </div>
+            
             @yield('main-content')    
         </div>
     </main>

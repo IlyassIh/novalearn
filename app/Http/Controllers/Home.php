@@ -8,9 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class Home extends Controller
 {
-    function index() {
+    function index()
+    {
+
+
         $etudiant = Auth::user()->etudiant;
-        
+
+
         return view('etudiant.home', compact('etudiant'));
     }
 }

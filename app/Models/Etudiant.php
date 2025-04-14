@@ -17,7 +17,8 @@ class Etudiant extends Model
         'niveau',
         'adresse',
         'filiere_id',
-        'centre'
+        'centre',
+        'role'
     ];
 
     public function filiere()
