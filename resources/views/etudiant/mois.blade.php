@@ -1,6 +1,7 @@
 @extends('component.dashboard-etudiant')
 @section('mois') clicked @endsection
 @section('css') <link rel="stylesheet" href="/css/mois.css"> @endsection
+@section('title-card') Mois payés @endsection
 @section('main-content')
 
 

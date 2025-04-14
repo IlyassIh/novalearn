@@ -10,6 +10,7 @@
 @section('css')
     <link rel="stylesheet" href="/css/notes.css">
 @endsection
+@section('title-card') Notes @endsection
 
 @section('main-content')
 
