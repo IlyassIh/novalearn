@@ -369,6 +369,15 @@ main {
     cursor: pointer;
 }
 
+input:focus {
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+}
+
+.card:hover {
+    transform: none !important;
+}
+
 @media only screen and (max-width: 767px) {
     .espace {
       padding-right: calc(var(--bs-gutter-x) * .5);

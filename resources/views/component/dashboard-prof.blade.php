@@ -46,7 +46,7 @@
                 </div>
                 <div class="logout btn btn-danger" onclick="window.location.href='{{route('login')}}'">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <a href="{{route('login')}}" >Se Deconnecter</a>
+                    <a href="{{route('logout')}}" >Se Deconnecter</a>
                 </div>
                 
             </nav>
@@ -54,8 +54,9 @@
         </div>
         <div class="main-content">
             <div class="user-auth container">
-                Bonjour, @yield('M-Mme')Your Name !
+                Bonjour, Prof. {{ $prof->nom }} {{ $prof->prenom }}!
             </div>
+            
             @yield('main-content')    
         </div>
     </main>

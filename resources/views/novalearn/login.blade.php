@@ -30,12 +30,16 @@
                     NovaLearn Rabat, NovaLearn Rabat Ville ou NovaLearn Salé.</p>
 
                     <div class="row gap-1 mb-2 w-20">
-                        <input class="col col-lg-12  col-sm-12 col-12 p-2" type="text " name="cni" placeholder="CNI*" required>
-            
+                        <input class="col col-lg-12  col-sm-12 col-12 p-2" type="text " name="cni" placeholder="CNI*" >
+                        @error('cni')
+                            <span class="text-danger">
+                                {{ $message }}
+                            </span>
+                        @enderror
                     </div>
 
                     <div class="row gap-1 mb-2">
-                        <input class="col col-lg-12 col-sm-12 col-12 p-2" type="password" name="password" placeholder="Mot de passe*" required>
+                        <input class="col col-lg-12 col-sm-12 col-12 p-2" type="password" name="password" placeholder="Mot de passe*" >
                     </div>
 
                     

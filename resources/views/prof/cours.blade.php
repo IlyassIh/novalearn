@@ -1,5 +1,5 @@
 @extends('component.dashboard-prof')
-@section('M-Mme')M/Mme @endsection
+
 @section('css') <link rel="stylesheet" href="/css/profCss/cours.css"> @endsection
 @section('ajouter-cours') clicked @endsection
 @section('main-content')
@@ -11,11 +11,11 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" name="nom" placeholder="Chemam" disabled>
+                    <input type="text" class="form-control" id="nom" name="nom" placeholder="{{$prof->nom}}" disabled>
                 </div>
                 <div class="col-md-6">
                     <label for="prenom" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Driss" disabled>
+                    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="{{$prof->prenom}}" disabled>
                 </div>
             </div>
         

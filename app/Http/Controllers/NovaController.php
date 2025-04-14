@@ -8,6 +8,7 @@ use App\Models\Etudiant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class NovaController extends Controller
 {
@@ -81,14 +82,15 @@ class NovaController extends Controller
             'telephone' => $telephone,
             'niveau' => $niveau,
             'adresse' => $adresse,
-            "filiere" => $filier,
+            "filiere_id" => $filier,
             'centre' => $centre
         ]);
 
         User::create([
             'cni'=> strtoupper($cni),
             'email' => strtolower($email),
-            'password' => Hash::make($password)
+            'password' => Hash::make($password),
+            'role' => 'Etudiant'
         ]);
 
         return to_route('login')->with('success', "Votre compte a été bien créé M/Mme {$nom} {$prenom}. Vous pouvez maintenant vous connecter.");
@@ -106,20 +108,28 @@ class NovaController extends Controller
             'password' => $password
         ];
 
-
-
-        $request->validate([
-            'cni' => 'required',
-            'password' => 'required'
-        ]);
-
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return to_route('accueil.index')->with('success', 'Vous avez bien vous connecté. Bienvenue !');
+            $user = Auth::user();
+
+            if( $user->role == 'Prof') {
+                return to_route('add-notes-prof.index')->with('success', 'Vous avez bien vous connecté. Bienvenue !');
+            }
+
+            else if( $user->role == 'Etudiant') {
+                return to_route('accueil.index')->with('success', 'Vous avez bien vous connecté. Bienvenue !');
+            }
+
         } else {
             return back()->withErrors([
                 'cni' => 'Le CNI ou le mot de passe est incorrect.'
             ])->onlyInput('cni');
         }
+    }
+
+    public function logout() {
+        Auth::logout();
+        Session::flush();
+        return to_route('login');
     }
 }
