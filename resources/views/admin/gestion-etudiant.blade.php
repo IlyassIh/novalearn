@@ -32,26 +32,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($etudiants as $etudiant )
+                                
                             <tr>
-                                <td class="vert-center">AA8877</td>
-                                <td class="vert-center">Elgarhi</td>
-                                <td class="vert-center">Mohammed Amine</td>
+                                <td class="vert-center">{{$etudiant->cni}}</td>
+                                <td class="vert-center">{{$etudiant->nom}}</td>
+                                <td class="vert-center">{{$etudiant->prenom}}</td>
                                 <td class="vert-center">
                                     <span class="btn btn-primary modifier">Modifier</span>
                                     <button class="btn btn-danger">Supprimer</button>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td class="vert-center">AA8877</td>
-                                <td class="vert-center">Elgarhi</td>
-                                <td class="vert-center">Mohammed Amine</td>
-                                <td class="vert-center">
-                                    <span class="btn btn-primary modifier">Modifier</span>
-                                    <button class="btn btn-danger">Supprimer</button>
-                                </td>
-                            </tr>
-
+                            @endforeach
+                            
 
 
                         </tbody>

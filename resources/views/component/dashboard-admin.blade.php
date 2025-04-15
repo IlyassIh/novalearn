@@ -55,9 +55,9 @@
                     
                     
                 </div>
-                <div class="logout btn btn-danger" onclick="window.location.href='{{route('login')}}'">
+                <div class="logout btn btn-danger" onclick="window.location.href='{{route('logout')}}'">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <a href="{{route('login')}}" >Se Deconnecter</a>
+                    <a href="{{route('logout')}}" >Se Deconnecter</a>
                 </div>
                 
             </nav>
@@ -67,6 +67,8 @@
             <div class="user-auth container">
                 Bonjour, admin
             </div>
+
+            
             
             @yield('main-content')    
         </div>

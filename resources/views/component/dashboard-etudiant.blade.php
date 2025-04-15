@@ -71,11 +71,14 @@
                 Bonjour, {{ $etudiant->nom }} {{ $etudiant->prenom }}!
             </div>
             <div class="container mt-3">
-                @if (Session()->has('success'))
-                    <div class="message alert alert-success text-start d-flex justify-content-between mt-3">
-                        <div>{{ Session('success') }}</div>
-                        <div class="xMark"><i class="fa-solid fa-xmark"></i></div>
-                    </div>
+                @if ($etudiant->validation == 1)
+
+                    @if (Session()->has('success'))
+                        <div class="message alert alert-success text-start d-flex justify-content-between mt-3">
+                            <div>{{ Session('success') }}</div>
+                            <div class="xMark"><i class="fa-solid fa-xmark"></i></div>
+                        </div>
+                    @endif
                 @endif
                 <div class="card profile-hide">
                     <div class="card-header text-white">@yield('title-card')</div>
@@ -106,23 +109,19 @@
                                     placeholder="1">
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="select-s" class="form-label">Sélectionnez une option</label>
-                            <div class="select-flex">
-                                <select class="form-select" id="select-s" name="select-s">
-                                    <option value="" selected disabled>-- Sélectionner -- </option>
-                                    <option value="s1">S1</option>
-                                    <option value="s2">S2</option>
-                                    <option value="s3">S3</option>
-                                    <option value="s4">S4</option>
-                                </select>
-                                <span class="btn btn-success search"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            </div>
-                        </div>
+                        @yield('search')
+
                     </div>
                 </div>
 
-                @yield('main-content')
+                @if ($etudiant->validation == 0)
+                    <div class=" container mt-3 alert alert-info">
+                        Ton dossier est en attente de validation
+                    </div>
+                @else
+                    @yield('main-content')
+                @endif
+
             </div>
         </div>
     </main>

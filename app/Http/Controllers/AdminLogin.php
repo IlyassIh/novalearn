@@ -24,7 +24,7 @@ class AdminLogin extends Controller
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return to_route('admin-gestion-prof.index');
+            return to_route('admin-gestion-prof.index')->with('success', 'Connexion réussie');
         }
         else {
             return back()->withErrors([

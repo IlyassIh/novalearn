@@ -2,6 +2,20 @@
 @section('note')
     clicked
 @endsection
+@section('search') <div class="mb-3">
+    <label for="select-s" class="form-label">Sélectionnez une option</label>
+    <div class="select-flex">
+        <select class="form-select" id="select-s" name="select-s">
+            <option value="" selected disabled>-- Sélectionner -- </option>
+            <option value="s1">S1</option>
+            <option value="s2">S2</option>
+            <option value="s3">S3</option>
+            <option value="s4">S4</option>
+        </select>
+        <span class="btn btn-success search"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </div>
+</div>
+@endsection
 
 @section('js') 
     <script src="/js/etudiant.js"></script>

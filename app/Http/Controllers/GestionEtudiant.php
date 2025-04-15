@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Etudiant;
 use Illuminate\Http\Request;
 
 class GestionEtudiant extends Controller
 {
     function index() {
-        return view('admin.gestion-etudiant');
+        $etudiants = Etudiant::all();
+        return view('admin.gestion-etudiant', compact('etudiants'));
     }
 }

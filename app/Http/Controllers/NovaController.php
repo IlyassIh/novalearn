@@ -75,8 +75,8 @@ class NovaController extends Controller
 
         Etudiant::create([
             'cni' => strtoupper($cni),
-            'nom' => $nom,
-            'prenom' => $prenom,
+            'nom' => ucfirst($nom),
+            'prenom' => ucfirst($prenom),
             'email' => strtolower($email),
             'password' => Hash::make($password),
             'telephone' => $telephone,
@@ -104,7 +104,7 @@ class NovaController extends Controller
         $cni = $request->cni;
         $password = $request->password;
         $credentials = [
-            'cni' => $cni,
+            'cni' => strtoupper($cni),
             'password' => $password
         ];
 
@@ -128,8 +128,22 @@ class NovaController extends Controller
     }
 
     public function logout() {
+        $user = Auth::user();
         Auth::logout();
         Session::flush();
-        return to_route('login');
+        if ($user->role === "Etudiant") {
+            return to_route('login')->with('success', 'Vous avez bien vous déconnecté. Au revoir !');
+        }
+        else if ($user->role === "Prof") {
+            return to_route('login')->with('success', 'Vous avez bien vous déconnecté. Au revoir !');
+        }
+        else if ($user->role === "Admin") {
+            return to_route('admin');
+        }
+
+        return to_route('login')->with('success', 'Vous avez bien vous déconnecté. Au revoir !');
+        
     }
+
+
 }

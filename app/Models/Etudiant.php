@@ -18,7 +18,8 @@ class Etudiant extends Model
         'adresse',
         'filiere_id',
         'centre',
-        'role'
+        'role',
+        'validation',
     ];
 
     public function filiere()
