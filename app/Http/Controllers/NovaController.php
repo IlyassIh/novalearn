@@ -80,7 +80,7 @@ class NovaController extends Controller
             'email' => strtolower($email),
             'password' => Hash::make($password),
             'telephone' => $telephone,
-            'niveau' => $niveau,
+            'niveau_etude' => $niveau,
             'adresse' => $adresse,
             "filiere_id" => $filier,
             'centre' => $centre

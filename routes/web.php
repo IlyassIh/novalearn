@@ -54,6 +54,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/novalearn/prof/delete/{cni}', [GestionProf::class, 'destroy'])->name('prof.destroy');
 
     Route::put('/novalearn/etudiant/accept/{cni}', [Validation::class, 'accept'])->name('etudiant.accept');
+    
     Route::put('/novalearn/etudiant/reject/{cni}', [Validation::class, 'reject'])->name('etudiant.reject');
 });
 

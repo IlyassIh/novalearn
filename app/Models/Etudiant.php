@@ -14,7 +14,7 @@ class Etudiant extends Model
         'email',
         'password',
         'telephone',
-        'niveau',
+        'niveau_etude',
         'adresse',
         'filiere_id',
         'centre',

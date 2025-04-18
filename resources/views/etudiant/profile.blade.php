@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="new_password" class="form-label">Nouveau mot de passe</label>
-                        <input type="password" class="form-control" id="new_password" name="confirmation_password" placeholder="Confirmer votre nouveau mot de passe">
+                        <input type="password" class="form-control" id="new_password" name="password_confirmation" placeholder="Confirmer votre nouveau mot de passe">
                     </div>
                 </div>
                 <button type="submit" class="btn save-profile">Enregistrer</button>

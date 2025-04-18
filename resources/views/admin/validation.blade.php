@@ -40,7 +40,7 @@
                             <td class="vert-center">{{ $etudiant->telephone }}</td>
                             <td class="vert-center">{{$etudiant->centre}}</td>
                             <td class="vert-center">{{ $etudiant->filiere->nom }}</td>
-                            <td class="vert-center">{{ $etudiant->niveau }}</td>
+                            <td class="vert-center">{{ $etudiant->niveau_etude }}</td>
                             <td class="vert-center">
                                 <div class="d-flex gap-1">
 
