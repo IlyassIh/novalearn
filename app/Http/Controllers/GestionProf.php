@@ -5,17 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Prof;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class GestionProf extends Controller
 {
-    function index() {
+    function index()
+    {
         $profs = Prof::all();
         return view('admin.gestion-prof', compact('profs'));
     }
 
-    public function create (Request $request) {
+    public function create(Request $request)
+    {
         $cni = strtoupper($request->cni);
         $nom = $request->nom;
         $prenom = $request->prenom;
@@ -34,48 +37,60 @@ class GestionProf extends Controller
         ], [
             'cni.required' => 'La CNI est obligatoire.',
             'cni.max' => 'La CNI ne doit pas dépasser 10 caractères.',
-            
+
             'nom.required' => 'Le nom est obligatoire.',
             'nom.max' => 'Le nom ne doit pas dépasser 25 caractères.',
-            
+
             'prenom.required' => 'Le prenom est obligatoire.',
             'prenom.max' => 'Le prenom ne doit pas dépasser 25 caractères.',
-            
+
             'email.required' => 'L\'email est obligatoire.',
             'email.email' => 'L\'email doit avoir un format valide.',
             'email.max' => 'L\'email ne doit pas dépasser 50 caractères.',
             'email.unique' => 'L\'email est deja utilisé.',
-            
+
             'password.required' => 'Le mot de passe est obligatoire.',
             'password.min' => 'Le mot de passe doit avoir au moins 8 caractères.',
             'password.confirmed' => 'Les mots de passe ne correspondent pas.',
-            
+
             'telephone.required' => 'Le telephone est obligatoire.',
             'telephone.max' => 'Le telephone ne doit pas dépasser 10 caractères.',
         ]);
 
-        Prof::create([
-            'cni' => $cni,
-            'nom' => ucfirst($nom),
-            'prenom' => ucfirst($prenom),
-            'email' => $email,
-            'telephone' => $telephone,
-            'password' => Hash::make($password)
-        ]);
+        try {
+            DB::beginTransaction();
 
-        User::create([
-            'cni' => $cni,
-            'email' => $email,
-            'password' => Hash::make($password),
-            'role' => 'Prof'
-        ]);
+            Prof::create([
+                'cni' => $cni,
+                'nom' => ucfirst($nom),
+                'prenom' => ucfirst($prenom),
+                'email' => $email,
+                'telephone' => $telephone,
+                'password' => Hash::make($password)
+            ]);
 
-        
+            User::create([
+                'cni' => $cni,
+                'email' => $email,
+                'password' => Hash::make($password),
+                'role' => 'Prof'
+            ]);
+
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollBack();
+
+            return back()->with('error', 'Erreur lors de l’enregistrement.');
+        }
+
+
+
 
         return to_route('admin-gestion-prof.index');
     }
 
-    public function destroy ($cni) {
+    public function destroy($cni)
+    {
         $cni = strtoupper($cni);
         $prof = Prof::where('cni', $cni)->first();
         if ($prof) {

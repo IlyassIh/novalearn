@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,13 +15,39 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('cni', 10)->unique();
+            $table->string('email', 50)->unique();
+            $table->string('password', 255);
+            $table->string('role', 15);
             $table->timestamps();
         });
+
+        DB::table('users')->insert([
+            [
+            'cni' => strtoupper('vexo'),
+            'email' => 'vexo@vexo.xom',
+            'password' => Hash::make('vexo123'),
+            'role' => 'Admin',
+            'created_at' => now(),
+            'updated_at' => now()
+            ],
+            [
+            'cni' => 'ae12345',
+            'email' => 'medamine@gmail.com',
+            'password' => Hash::make('123456789'),
+            'role' => 'Etudiant',
+            'created_at' => now(),
+            'updated_at' => now()
+            ],
+            [
+            'cni' => 'd1122',
+            'email' => 'driss@gmail.com',
+            'password' => Hash::make('123456789'),
+            'role' => 'Prof',
+            'created_at' => now(),
+            'updated_at' => now()
+            ],
+            ]);
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
