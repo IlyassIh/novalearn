@@ -95,9 +95,9 @@
                         <div class="col col-lg-6 col-sm-12 col-12 p-1">
                             <select class="form-control p-2" name="centre">
                                 <option value="" disabled selected>Centre souhaité ?</option>
-                                <option value="rabat-menzeh" {{ old('centre') == 'rabat-menzeh' ? 'selected' : '' }}>NovaLearn Rabat Menzeh</option>
-                                <option value="rabat-ville" {{ old('centre') == 'rabat-ville' ? 'selected' : '' }}>NovaLearn Rabat Ville</option>
-                                <option value="rabat-sale" {{ old('centre') == 'rabat-sale' ? 'selected' : '' }}>NovaLearn Sale</option>
+                                <option value="NovaLearn Rabat Menzeh" {{ old('centre') == 'rabat-menzeh' ? 'selected' : '' }}>NovaLearn Rabat Menzeh</option>
+                                <option value="NovaLearn Rabat Ville" {{ old('centre') == 'rabat-ville' ? 'selected' : '' }}>NovaLearn Rabat Ville</option>
+                                <option value="NovaLearn Sale" {{ old('centre') == 'rabat-sale' ? 'selected' : '' }}>NovaLearn Sale</option>
                             </select>
                             @error('centre')
                                 <div class="text-danger">{{ $message }}</div>
