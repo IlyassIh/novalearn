@@ -85,16 +85,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {{-- foreach --}}
                             <tr>
                                 <td><input type="text" class="form-control" name="nom_etudiant[]"
                                         placeholder="Ihassane Ilyass" disabled></td>
                                 <td><input type="text" class="form-control" name="matiere[]" placeholder="PHP" disabled>
                                 </td>
-                                <td><input type="number" class="form-control" name="note[]" step="0.01"
+                                <td><input type="number" class="form-control" name="note" step="0.01"
                                         placeholder="Note"></td>
 
                             </tr>
-
+                            {{-- endforeach --}}
                             <tr>
                                 <td><input type="text" class="form-control" name="nom_etudiant[]"
                                         placeholder="Elboussoughti Mohammed" disabled></td>

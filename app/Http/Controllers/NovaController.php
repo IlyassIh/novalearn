@@ -112,12 +112,17 @@ class NovaController extends Controller
             $request->session()->regenerate();
             $user = Auth::user();
 
-            if( $user->role == 'Prof') {
+            if( $user->role === 'Prof') {
                 return to_route('add-notes-prof.index')->with('success', 'Vous avez bien vous connecté. Bienvenue !');
             }
 
-            else if( $user->role == 'Etudiant') {
+            else if( $user->role === 'Etudiant') {
                 return to_route('accueil.index')->with('success', 'Vous avez bien vous connecté. Bienvenue !');
+            }
+            else {
+                return back()->withErrors([
+                    'cni' => 'Le CNI ou le mot de passe est incorrect.'
+                ])->onlyInput('cni');
             }
 
         } else {
