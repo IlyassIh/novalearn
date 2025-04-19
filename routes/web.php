@@ -56,6 +56,11 @@ Route::middleware('auth')->group(function () {
     Route::put('/novalearn/etudiant/accept/{cni}', [Validation::class, 'accept'])->name('etudiant.accept');
     
     Route::put('/novalearn/etudiant/reject/{cni}', [Validation::class, 'reject'])->name('etudiant.reject');
+
+    Route::get('/get-matieres/{filiere_id}', [AjouterNoteProf::class, 'getMatieres']);
+
+    Route::post('/get-filiere', [AjouterNoteProf::class, 'getFiliere'])->name('get-filiere');
+
 });
 
 

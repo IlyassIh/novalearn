@@ -14,9 +14,9 @@
 .card:hover {
     transform: none !important;
 }
-.table {
+/* .table {
     display: none;
-}
+} */
 .save {
     border: none;
     background-color: var(--primary-color) !important;

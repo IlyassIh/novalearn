@@ -25,6 +25,8 @@ return new class extends Migration
             $table->unsignedBigInteger('controle_id');
             $table->foreign('controle_id')->references('id')->on('controles');
 
+            $table->unsignedBigInteger('filiere_id');
+            $table->foreign('filiere_id')->references('id')->on('filiers');
             $table->float('note');
 
 
