@@ -631,6 +631,178 @@ return new class extends Migration
                 'semaistre' => 'S4',
                 'coef' => 2
             ],
+
+            //------------------------------- M48
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 48,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S1',
+                'coef' => 3
+            ],
+
+            //------------------------------- M49
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 49,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S1',
+                'coef' => 3
+            ],
+
+            //------------------------------- M50
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 50,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S1',
+                'coef' => 2
+            ],
+
+            //------------------------------- M51
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 51,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S1',
+                'coef' => 2
+            ],
+
+            //------------------------------- M52
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 52,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S2',
+                'coef' => 3
+            ],
+
+            //------------------------------- M53
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 53,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S2',
+                'coef' => 3
+            ],
+
+            //------------------------------- M54
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 54,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S2',
+                'coef' => 2
+            ],
+
+            //------------------------------- M55
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 55,
+                'annee_scolaire' => 1,
+                'semaistre' => 'S2',
+                'coef' => 2
+            ],
+
+            //------------------------------- M56
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 56,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S3',
+                'coef' => 3
+            ],
+
+            //------------------------------- M57
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 57,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S3',
+                'coef' => 3
+            ],
+
+            //------------------------------- M58
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 58,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S3',
+                'coef' => 3
+            ],
+
+            //------------------------------- M59
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 59,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S3',
+                'coef' => 2
+            ],
+
+            //------------------------------- M60
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 60,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S3',
+                'coef' => 2
+            ],
+
+            //------------------------------- M61
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 61,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S3',
+                'coef' => 2
+            ],
+
+            //------------------------------- M62
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 62,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S4',
+                'coef' => 3
+            ],
+
+            //------------------------------- M63
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 63,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S4',
+                'coef' => 3
+            ],
+
+            //------------------------------- M64
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 64,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S4',
+                'coef' => 3
+            ],
+
+            //------------------------------- M65
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 65,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S4',
+                'coef' => 2
+            ],
+
+            //------------------------------- M66
+            [
+                'filiere_id' => 4,
+                'matiere_id' => 66,
+                'annee_scolaire' => 2,
+                'semaistre' => 'S4',
+                'coef' => 2
+            ],
+
         ]);
     }
 

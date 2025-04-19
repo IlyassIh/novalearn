@@ -111,6 +111,44 @@ return new class extends Migration
             ['nom' => 'Contenu Digital / Pub'], //46
             
             ['nom' => 'Réalité virtuelle / AR'], //47
+
+            ['nom' => 'Économie Générale'], //48
+            
+            ['nom' => 'Comptabilité Générale 1'], //49
+
+            ['nom' => 'Informatique de gestion'], //50
+
+            ['nom' => 'Méthodologie universitaire'], //51
+
+            ['nom' => 'Comptabilité Générale 2'], //52
+
+            ['nom' => 'Droit Commercial'], //53
+
+            ['nom' => 'Statistiques descriptives'], //54
+
+            ['nom' => 'Organisation des entreprises'], //55
+
+            ['nom' => 'Comptabilité Analytique'], //56
+
+            ['nom' => 'Marketing fondamental'], //57
+
+            ['nom' => 'GRH'], //58
+
+            ['nom' => 'TQG'], //59
+
+            ['nom' => 'Fiscalité'], //60
+
+            ['nom' => 'Logiciels de gestion'], //61
+
+            ['nom' => 'Analyse financière'], //62
+
+            ['nom' => 'Management stratégique'], //63
+
+            ['nom' => 'Audit & Contrôle de gestion'], //64
+
+            ['nom' => 'Simulation de gestion'], //65
+
+            ['nom' => 'Projet / Étude de cas'], //66
         ]);
     }
 
