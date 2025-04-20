@@ -28,6 +28,8 @@ return new class extends Migration
             $table->unsignedBigInteger('filiere_id');
             $table->foreign('filiere_id')->references('id')->on('filiers');
             $table->float('note');
+            $table->integer('annee_scolaire');
+            $table->string('semaistre');
 
 
 

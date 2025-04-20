@@ -13,7 +13,6 @@ class Note extends Model
         'note',
         'controle_id',
         'filiere_id',
-        'matiere',
         'annee_scolaire',
         'semaistre'
     ];

@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Filier;
-use App\Models\Matiere;
 use App\Models\Controle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Note;
 
 class AjouterNoteProf extends Controller
 {
@@ -80,13 +79,15 @@ class AjouterNoteProf extends Controller
             ->select('etudiants.id as etudiant_id','etudiants.nom', 'etudiants.prenom', 'matieres.nom as matiere', 'filiere_matieres.annee_scolaire as annee_scolaire', 'filiere_matieres.semaistre as semaistre')
             ->get();
             
+            // @dd($etudiants[0]->semaistre);
 
         if ($request->has('search')) {
             return view('prof.ajouterNote', compact('etudiants', 'prof', 'filiers', 'matieres', 'controles'));
         }
-        
-        if ($request->has('soumettre')) {
-            
+        elseif ($request->has('soumettre')) {
+            // @dd($filieres, $matiers);
+
+            // @dd($etudiants);
             
             
             $notes = $request->note; // [etudiant_id => valeur]
@@ -96,20 +97,17 @@ class AjouterNoteProf extends Controller
             
                 if (!is_null($noteValue)) {
                     $addperso = Note::create([
-                        'matiere_id' => $matiers, // ⚠️ si $matiers est un tableau, prends juste l'ID sélectionné
+                        'matiere_id' => intval($matiers),
                         'etudiant_id' => $etudiant->etudiant_id,
                         'prof_id' => $prof->id,
-                        'note' => $noteValue, // ✅ note pour cet étudiant
-                        'controle_id' => $controle,
-                        'filiere_id' => $filieres,
-                        'matiere' => $etudiant->matiere,
+                        'note' => $noteValue,
+                        'controle_id' => intval($controle),
+                        'filiere_id' => intval($filieres),
                         'annee_scolaire' => $etudiant->annee_scolaire,
                         'semaistre' => $etudiant->semaistre
                     ]);
                 }
             }
-            
-            @dd($notes);
             
             return view('prof.ajouterNote', compact('prof', 'filiers', 'matieres', 'controles'));
             
