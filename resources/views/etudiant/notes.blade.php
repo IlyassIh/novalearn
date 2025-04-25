@@ -45,46 +45,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Mathématiques</td>
-                            <td>16</td>
-                            <td>15</td>
-                            <td>11</td>
-                            <td>10</td>
-                            <td>17</td>
-                            <td>3</td>
-                            <td>Driss</td>
-                        </tr>
-                        <tr>
-                            <td>Physique</td>
-                            <td>16</td>
-                            <td>15</td>
-                            <td>11</td>
-                            <td>10</td>
-                            <td>17</td>
-                            <td>3</td>
-                            <td>Driss</td>
-                        </tr>
-                        <tr>
-                            <td>Informatique</td>
-                            <td>16</td>
-                            <td>15</td>
-                            <td>11</td>
-                            <td>10</td>
-                            <td>17</td>
-                            <td>3</td>
-                            <td>Driss</td>
-                        </tr>
-                        <tr>
-                            <td>Français</td>
-                            <td>16</td>
-                            <td>15</td>
-                            <td>11</td>
-                            <td>10</td>
-                            <td>17</td>
-                            <td>3</td>
-                            <td>Driss</td>
-                        </tr>
+                        @foreach ($matieres as $m)
+                            @php
+                                // ميثود مختصرة لجلب الدرجة أو إرجاع فراغ
+                                $note = fn($ctrl) => $notes[$m->matiere_id . '_' . $ctrl] ?? '';
+                            @endphp
+
+                            <tr>
+                                <td>{{ $m->nom }}</td>
+                                <td>{{ $note(1) }}</td>  {{-- Controle N1 --}}
+                                <td>{{ $note(2) }}</td>  {{-- Controle N2 --}}
+                                <td>{{ $note(3) }}</td>  {{-- Controle N3 --}}
+                                <td>{{ $note(4) }}</td>  {{-- Exam théorique --}}
+                                <td>{{ $note(5) }}</td>  {{-- Exam pratique --}}
+                                <td>{{ $m->coef }}</td>
+                                <td>{{ $m->prof_nom ?? 'aucun prof' }} {{ $m->prof_prenom }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 

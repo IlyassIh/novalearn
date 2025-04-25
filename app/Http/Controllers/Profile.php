@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Etudiant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -45,7 +44,10 @@ class Profile extends Controller
 
         DB::transaction(function () use ($email, $telephone, $password, &$updated) {
             $etudiant = Auth::user()->etudiant;
-            $user = Auth::user();
+            $user = Auth::user(); // Ensure this returns an instance of a User model
+            if (!$user instanceof \App\Models\User) {
+                throw new \Exception('Authenticated user is not an instance of the User model.');
+            }
     
             if ($etudiant->email !== $email) {
                 $etudiant->email = $email;
