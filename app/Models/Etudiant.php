@@ -20,6 +20,8 @@ class Etudiant extends Model
         'centre',
         'role',
         'validation',
+        'annee_scolaire',
+        'semaistre'
     ];
 
     public function filiere()

@@ -83,7 +83,9 @@ class NovaController extends Controller
             'niveau_etude' => $niveau,
             'adresse' => $adresse,
             "filiere_id" => $filier,
-            'centre' => $centre
+            'centre' => $centre,
+            'annee_scolaire' => 1,
+            'semaistre' => 's1'
         ]);
 
         User::create([
