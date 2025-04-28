@@ -29,43 +29,43 @@ return new class extends Migration
             $table->string('semaistre');
         });
 
-        DB::table('prof__matiere__filieres')->insert([
-            [
-                'prof_id' => 1,
-                'matiere_id' => 1,
-                'filiere_id' => 1,
-                'annee_scolaire' => 1,
-                'semaistre' => 'S1'
-            ],
-            [
-                'prof_id' => 1,
-                'matiere_id' => 5,
-                'filiere_id' => 2,
-                'annee_scolaire' => 1,
-                'semaistre' => 'S1'
-            ],
-            [
-                'prof_id' => 1,
-                'matiere_id' => 2,
-                'filiere_id' => 1,
-                'annee_scolaire' => 1,
-                'semaistre' => 'S1'
-            ],
-            [
-                'prof_id' => 2,
-                'matiere_id' => 3,
-                'filiere_id' => 1,
-                'annee_scolaire' => 1,
-                'semaistre' => 'S1'
-            ],
-            [
-                'prof_id' => 3,
-                'matiere_id' => 5,
-                'filiere_id' => 1,
-                'annee_scolaire' => 1,
-                'semaistre' => 'S1'
-            ],
-            ]);
+        // DB::table('prof__matiere__filieres')->insert([
+        //     [
+        //         'prof_id' => 1,
+        //         'matiere_id' => 1,
+        //         'filiere_id' => 1,
+        //         'annee_scolaire' => 1,
+        //         'semaistre' => 'S1'
+        //     ],
+        //     [
+        //         'prof_id' => 1,
+        //         'matiere_id' => 5,
+        //         'filiere_id' => 2,
+        //         'annee_scolaire' => 1,
+        //         'semaistre' => 'S1'
+        //     ],
+        //     [
+        //         'prof_id' => 1,
+        //         'matiere_id' => 2,
+        //         'filiere_id' => 1,
+        //         'annee_scolaire' => 1,
+        //         'semaistre' => 'S1'
+        //     ],
+        //     [
+        //         'prof_id' => 2,
+        //         'matiere_id' => 3,
+        //         'filiere_id' => 1,
+        //         'annee_scolaire' => 1,
+        //         'semaistre' => 'S1'
+        //     ],
+        //     [
+        //         'prof_id' => 3,
+        //         'matiere_id' => 6,
+        //         'filiere_id' => 1,
+        //         'annee_scolaire' => 1,
+        //         'semaistre' => 'S1'
+        //     ],
+        //     ]);
     }
 
     /**

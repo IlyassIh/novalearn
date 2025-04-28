@@ -26,23 +26,20 @@
             Dernières notes
         </div>
         <div class="card-body">
-            <div class="last-notes mb-3">
-                <div>
-                    <label for="">PHP : </label>
-                    <label for="">16</label>
+            @foreach ($notes as $note)
+                <div class="last-notes mb-3">
+                    <div>
+                        <label for="">{{$note->nom}} : </label>
+                        <label for="">{{$note->note}}
+                        </label>
+                    </div>
+
+                    <a href="{{ route('note.index') }}" class="text-black"><i
+                            class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
+            @endforeach
 
-                <a href="{{ route('note.index') }}" class="text-black"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-
-            <div class="last-notes">
-                <div>
-                    <label for="">JAVA : </label>
-                    <label for="">16</label>
-                </div>
-
-                <a href="{{ route('note.index') }}" class="text-black"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
+            
         </div>
     </div>
 @endsection

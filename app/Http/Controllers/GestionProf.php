@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Prof;
 use App\Models\User;
+use App\Models\Filier;
+use App\Models\Matiere;
+use App\Models\Prof_Matiere_Filiere;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +17,7 @@ class GestionProf extends Controller
     function index()
     {
         $profs = Prof::all();
+        
         return view('admin.gestion-prof', compact('profs'));
     }
 
@@ -102,5 +106,25 @@ class GestionProf extends Controller
             $user->delete();
         }
         return to_route('admin-gestion-prof.index');
+    }
+
+    public function addMat(Request $request ,$id) {
+        $prof = Prof::findORFail($id);
+        $a = Prof_Matiere_Filiere::create([
+            'prof_id' => $prof->id,
+            'matiere_id' => $request->matiere,
+            'filiere_id' => $request->filiere,
+            'semaistre' => $request->semestre,
+            'annee_scolaire' => $request->annee_scolaire
+
+        ]);
+        return to_route('admin-gestion-prof.index');
+    }
+
+    public function showAddMat($id) {
+        $prof = Prof::findORFail($id);
+        $filieres = Filier::all();
+        $matieres = Matiere::all();
+        return view('admin.addMat', compact('filieres', 'matieres', 'prof'));
     }
 }

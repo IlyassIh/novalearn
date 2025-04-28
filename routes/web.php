@@ -51,6 +51,10 @@ Route::middleware('auth')->group(function () {
 
     Route::put('/novalearn/prof/update', [ProfileProf::class, 'update'])->name('update.prof');
 
+    Route::post('/get-filiere', [AjouterNoteProf::class, 'getFiliere'])->name('get-filiere');
+
+    Route::get('/get-mat/{id}', [GestionProf::class, 'showAddMat'])->name('show-matiere');
+
     Route::delete('/novalearn/prof/delete/{cni}', [GestionProf::class, 'destroy'])->name('prof.destroy');
 
     Route::put('/novalearn/etudiant/accept/{cni}', [Validation::class, 'accept'])->name('etudiant.accept');
@@ -59,7 +63,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/get-matieres/{filiere_id}', [AjouterNoteProf::class, 'getMatieres']);
 
-    Route::post('/get-filiere', [AjouterNoteProf::class, 'getFiliere'])->name('get-filiere');
+    Route::post('/add-matieres/{id}', [GestionProf::class, 'addMat'])->name('prof.addMat');
+
 
 });
 

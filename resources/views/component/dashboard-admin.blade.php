@@ -36,10 +36,10 @@
                     </div>
 
 
-                    <div class="link @yield('admin-consultation')" onclick="window.location.href='{{route('admin-consultation.index')}}'">
+                    {{-- <div class="link @yield('admin-consultation')" onclick="window.location.href='{{route('admin-consultation.index')}}'">
                         <i class="fa-solid fa-eye"></i>
                         <a href="{{route('admin-consultation.index')}}">Consultation</a>
-                    </div>
+                    </div> --}}
 
 
                     {{-- <div class="link @yield('admin-search')" onclick="window.location.href='{{route('accueil.index')}}'">

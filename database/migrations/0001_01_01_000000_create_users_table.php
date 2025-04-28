@@ -24,46 +24,55 @@ return new class extends Migration
 
         DB::table('users')->insert([
             [
-            'cni' => strtoupper('vexo'),
-            'email' => 'vexo@vexo.xom',
-            'password' => Hash::make('vexo123'),
-            'role' => 'Admin',
-            'created_at' => now(),
-            'updated_at' => now()
+                'cni' => strtoupper('vexo'),
+                'email' => 'vexo@vexo.xom',
+                'password' => Hash::make('vexo123'),
+                'role' => 'Admin',
+                'created_at' => now(),
+                'updated_at' => now()
             ],
             [
-            'cni' => 'ae12345',
-            'email' => 'medamine@gmail.com',
-            'password' => Hash::make('123456789'),
-            'role' => 'Etudiant',
-            'created_at' => now(),
-            'updated_at' => now()
+                'cni' => 'ae12345',
+                'email' => 'medamine@gmail.com',
+                'password' => Hash::make('123456789'),
+                'role' => 'Etudiant',
+                'created_at' => now(),
+                'updated_at' => now()
             ],
+            // [
+            //     'cni' => 'd1122',
+            //     'email' => 'driss@gmail.com',
+            //     'password' => Hash::make('123456789'),
+            //     'role' => 'Prof',
+            //     'created_at' => now(),
+            //     'updated_at' => now()
+            // ],
+            // [
+            //     'cni' => 'a1122',
+            //     'email' => 'bayoussef@gmail.com',
+            //     'password' => Hash::make('123456789'),
+            //     'role' => 'Prof',
+            //     'created_at' => now(),
+            //     'updated_at' => now()
+            // ],
+            // [
+            //     'cni' => 'z1122',
+            //     'email' => 'zouhaire@gmail.com',
+            //     'password' => Hash::make('123456789'),
+            //     'role' => 'Prof',
+            //     'created_at' => now(),
+            //     'updated_at' => now()
+            // ],
+
             [
-            'cni' => 'd1122',
-            'email' => 'driss@gmail.com',
-            'password' => Hash::make('123456789'),
-            'role' => 'Prof',
-            'created_at' => now(),
-            'updated_at' => now()
-            ],
-            [
-            'cni' => 'a1122',
-            'email' => 'bakyousef@gmail.com',
-            'password' => Hash::make('123456789'),
-            'role' => 'Prof',
-            'created_at' => now(),
-            'updated_at' => now()
-            ],
-            [
-            'cni' => 'z1122',
-            'email' => 'zouhaire@gmail.com',
-            'password' => Hash::make('123456789'),
-            'role' => 'Prof',
-            'created_at' => now(),
-            'updated_at' => now()
-            ],
-            
+                'cni' => 'ih11',
+                'email' => strtolower('ilyassihassane@gmail.com'),
+                'password' => Hash::make('123456789'),
+                'role' => 'Etudiant',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]
+
         ]);
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

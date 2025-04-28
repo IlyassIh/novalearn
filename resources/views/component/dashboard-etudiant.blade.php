@@ -104,9 +104,9 @@
                                     disabled placeholder="{{ $etudiant->filiere->nom }}">
                             </div>
                             <div class="col-md-6">
-                                <label for="groupe" class="form-label">Groupe</label>
+                                <label for="groupe" class="form-label">Annee Scolaire</label>
                                 <input type="text" class="form-control" id="groupe" name="groupe" disabled
-                                    placeholder="1">
+                                    placeholder="{{$etudiant->annee_scolaire}}">
                             </div>
                         </div>
                         @yield('search')

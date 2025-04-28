@@ -27,14 +27,13 @@ class Note extends Controller
         ->get();
 
 
-                // نحضّر الدرجات جميعاً في pivot واحد: (matiere_id, controle_id) → note
         $notes = DB::table('notes')
-        ->where('etudiant_id', 1)
+        ->where('etudiant_id', $etudiant->id)
         ->where('semaistre', 's1')
         ->whereIn('controle_id', [1,2,3,4,5])
         ->get(['matiere_id', 'controle_id', 'note'])
-        ->keyBy(fn($n) => $n->matiere_id . '_' . $n->controle_id)  // توليد المفتاح
-        ->map(fn($n) => $n->note)          // نحفظ فقط قيمة note
+        ->keyBy(fn($n) => $n->matiere_id . '_' . $n->controle_id)  
+        ->map(fn($n) => $n->note)  
         ->toArray();
             
 

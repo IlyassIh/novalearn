@@ -24,39 +24,39 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::table('profs')->insert([
-            [
-                'cni' => strtoupper('d1122'),
-                'nom' => 'chemam',
-                'prenom' => 'driss',
-                'email' => 'driss@gmail.com',
-                'password' => Hash::make('123456789'),
-                'telephone' => '0612345678',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'cni' => strtoupper('a1122'),
-                'nom' => 'bakyousef',
-                'prenom' => 'abdillah',
-                'email' => 'abdillah@gmail.com',
-                'password' => Hash::make('123456789'),
-                'telephone' => '0622334455',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'cni' => strtoupper('z1122'),
-                'nom' => 'taibi',
-                'prenom' => 'zouhaire',
-                'email' => 'zouhaire@gmail.com',
-                'password' => Hash::make('123456789'),
-                'telephone' => '0612345677',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-        ],
-        );
+        // DB::table('profs')->insert([
+        //     [
+        //         'cni' => strtoupper('d1122'),
+        //         'nom' => 'chemam',
+        //         'prenom' => 'driss',
+        //         'email' => 'driss@gmail.com',
+        //         'password' => Hash::make('123456789'),
+        //         'telephone' => '0612345678',
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'cni' => strtoupper('a1122'),
+        //         'nom' => 'bayousef',
+        //         'prenom' => 'abdillah',
+        //         'email' => 'abdillah@gmail.com',
+        //         'password' => Hash::make('123456789'),
+        //         'telephone' => '0622334455',
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        //     [
+        //         'cni' => strtoupper('z1122'),
+        //         'nom' => 'taibi',
+        //         'prenom' => 'zouhaire',
+        //         'email' => 'zouhaire@gmail.com',
+        //         'password' => Hash::make('123456789'),
+        //         'telephone' => '0612345677',
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ],
+        // ],
+        // );
     }
 
     /**

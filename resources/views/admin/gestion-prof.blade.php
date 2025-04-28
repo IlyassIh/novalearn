@@ -46,6 +46,7 @@
                         <tbody>
 
                             @foreach ($profs as $prof)
+
                                 <tr>
                                     <td class="vert-center">{{ $prof->cni }}</td>
                                     <td class="vert-center">{{ $prof->nom }}</td>
@@ -58,8 +59,10 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Supprimer</button>
                                         </form>
+                                        <a href="{{route('show-matiere', $prof->id)}}" class="btn btn-success ajouter-filiere">Ajouter Filieres</a>
                                     </td>
                                 </tr>
+                            
                             @endforeach
 
 
@@ -165,7 +168,7 @@
             </div>
             <div class="card-body p-3 ps-4 pe-4">
                 {{-- --------------------------------- form to modifier un prof ------------------------------------------- --}}
-                <form">
+                <form>
                     @csrf
                     <div class="row mb-3">
                         <div class="col-md-6">
@@ -229,6 +232,8 @@
                     {{-- --------------------------------- End form to modifier un prof ------------------------------------------- --}}
             </div>
         </div>
+
+
 
     </div>
 @endsection
